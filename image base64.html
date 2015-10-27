@@ -1,44 +1,19 @@
-<!doctype html>
-<html> 
-<head></head>
-<script> 
-
-window.onload = function(){ 
-function SubstrDemo(){
-   var s, ss;                // 声明变量。
-   var s = "The rain in Spain falls mainly in the plain.";
-   ss = s.substr(12, 5); // 获取子字符串。
-   return(ss);               // 返回 "Spain"。
-}
-    var input = document.getElementById("demo_input"); 
-    var result= document.getElementById("result"); 
-    var img_area = document.getElementById("img_area"); 
-    if ( typeof(FileReader) === 'undefined' ){ 
-            result.innerHTML = "抱歉，你的浏览器不支持 FileReader，请使用现代浏览器操作！"; 
-            input.setAttribute( 'disabled','disabled' ); 
-    } else { 
-            input.addEventListener( 'change',readFile,false );} 
-} 
-function readFile(){ 
-        var file = this.files[0]; 
-//这里我们判断下类型如果不是图片就返回 去掉就可以上传任意文件   
-        if(!/image\/\w+/.test(file.type)){   
-                alert("请确保文件为图像类型"); 
-                return false; 
-        } 
-        var reader = new FileReader(); 
-        reader.readAsDataURL(file); 
-		
-        reader.onload = function(e){ 
-                result.innerHTML = '<img src="'+this.result+'" alt=""/>'; 
-                img_area.innerHTML = '<div class="sitetip">图片img标签展示：</div><img src="'+this.result+'" alt=""/>'; 
-        }
-} 
-</script> 
-</head>  
-<body> 
-<input type="file" value="sdgsdg" id="demo_input" /> 
-<textarea id="result" rows=30 cols=300></textarea> 
-<p id="img_area"></p> 
-</body> 
-</html> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">d</span></p>
+</body>
+</html>
